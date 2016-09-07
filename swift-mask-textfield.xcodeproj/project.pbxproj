@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3338E8721D809CC100767E4B /* swift-mask-textfield.h in Headers */ = {isa = PBXBuildFile; fileRef = 3338E8711D809CC100767E4B /* swift-mask-textfield.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3338E8791D809CC100767E4B /* swift-mask-textfield.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338E86E1D809CC100767E4B /* swift-mask-textfield.framework */; };
-		3338E87E1D809CC100767E4B /* swift_mask_textfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3338E87D1D809CC100767E4B /* swift_mask_textfieldTests.swift */; };
+		3338E8791D809CC100767E4B /* SwiftMaskTextfield.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */; };
+		3338E88E1D80A28000767E4B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3338E8891D80A28000767E4B /* Info.plist */; };
+		3338E88F1D80A28000767E4B /* swift-mask-textfield.h in Headers */ = {isa = PBXBuildFile; fileRef = 3338E88A1D80A28000767E4B /* swift-mask-textfield.h */; };
+		3338E8901D80A28000767E4B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3338E88C1D80A28000767E4B /* Info.plist */; };
+		3338E8911D80A28000767E4B /* swift_mask_textfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3338E88D1D80A28000767E4B /* swift_mask_textfieldTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3338E86E1D809CC100767E4B /* swift-mask-textfield.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "swift-mask-textfield.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3338E8711D809CC100767E4B /* swift-mask-textfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-mask-textfield.h"; sourceTree = "<group>"; };
-		3338E8731D809CC100767E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMaskTextfield.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3338E8781D809CC100767E4B /* swift-mask-textfieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mask-textfieldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3338E87D1D809CC100767E4B /* swift_mask_textfieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_mask_textfieldTests.swift; sourceTree = "<group>"; };
-		3338E87F1D809CC100767E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3338E8891D80A28000767E4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3338E88A1D80A28000767E4B /* swift-mask-textfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "swift-mask-textfield.h"; sourceTree = "<group>"; };
+		3338E88C1D80A28000767E4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3338E88D1D80A28000767E4B /* swift_mask_textfieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swift_mask_textfieldTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3338E8791D809CC100767E4B /* swift-mask-textfield.framework in Frameworks */,
+				3338E8791D809CC100767E4B /* SwiftMaskTextfield.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +55,8 @@
 		3338E8641D809CC100767E4B = {
 			isa = PBXGroup;
 			children = (
-				3338E8701D809CC100767E4B /* swift-mask-textfield */,
-				3338E87C1D809CC100767E4B /* swift-mask-textfieldTests */,
+				3338E8881D80A28000767E4B /* swift-mask-textfield */,
+				3338E88B1D80A28000767E4B /* swift-mask-textfieldTests */,
 				3338E86F1D809CC100767E4B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,26 +64,26 @@
 		3338E86F1D809CC100767E4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3338E86E1D809CC100767E4B /* swift-mask-textfield.framework */,
+				3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */,
 				3338E8781D809CC100767E4B /* swift-mask-textfieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3338E8701D809CC100767E4B /* swift-mask-textfield */ = {
+		3338E8881D80A28000767E4B /* swift-mask-textfield */ = {
 			isa = PBXGroup;
 			children = (
-				3338E8711D809CC100767E4B /* swift-mask-textfield.h */,
-				3338E8731D809CC100767E4B /* Info.plist */,
+				3338E8891D80A28000767E4B /* Info.plist */,
+				3338E88A1D80A28000767E4B /* swift-mask-textfield.h */,
 			);
 			path = "swift-mask-textfield";
 			sourceTree = "<group>";
 		};
-		3338E87C1D809CC100767E4B /* swift-mask-textfieldTests */ = {
+		3338E88B1D80A28000767E4B /* swift-mask-textfieldTests */ = {
 			isa = PBXGroup;
 			children = (
-				3338E87D1D809CC100767E4B /* swift_mask_textfieldTests.swift */,
-				3338E87F1D809CC100767E4B /* Info.plist */,
+				3338E88C1D80A28000767E4B /* Info.plist */,
+				3338E88D1D80A28000767E4B /* swift_mask_textfieldTests.swift */,
 			);
 			path = "swift-mask-textfieldTests";
 			sourceTree = "<group>";
@@ -93,7 +95,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3338E8721D809CC100767E4B /* swift-mask-textfield.h in Headers */,
+				3338E88F1D80A28000767E4B /* swift-mask-textfield.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +117,7 @@
 			);
 			name = "swift-mask-textfield";
 			productName = "swift-mask-textfield";
-			productReference = 3338E86E1D809CC100767E4B /* swift-mask-textfield.framework */;
+			productReference = 3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3338E8771D809CC100767E4B /* swift-mask-textfieldTests */ = {
@@ -179,6 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3338E8901D80A28000767E4B /* Info.plist in Resources */,
+				3338E88E1D80A28000767E4B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3338E8911D80A28000767E4B /* swift_mask_textfieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +208,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3338E87E1D809CC100767E4B /* swift_mask_textfieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +324,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftMaskTextfield;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -336,7 +340,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftMaskTextfield;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -380,6 +384,7 @@
 				3338E8841D809CC100767E4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3338E8851D809CC100767E4B /* Build configuration list for PBXNativeTarget "swift-mask-textfieldTests" */ = {
 			isa = XCConfigurationList;
@@ -388,6 +393,7 @@
 				3338E8871D809CC100767E4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
