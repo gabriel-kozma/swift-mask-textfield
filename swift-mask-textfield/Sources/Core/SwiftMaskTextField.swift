@@ -1,14 +1,52 @@
-//
-//  SwiftMaskTextField.swift
-//  swift-mask-textfield
-//
-//  Created by Gabriel Kozma on 9/7/16.
-//  Copyright © 2016 gabrielmackoz. All rights reserved.
-//
+/*
+ * MIT License
+ *
+ * Copyright (c) 2016 Gabriel Maccori Kozma
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 
 import UIKit
 
+//**********************************************************************************************************
+//
+// MARK: - Constants -
+//
+//**********************************************************************************************************
+
+//**********************************************************************************************************
+//
+// MARK: - Definitions -
+//
+//**********************************************************************************************************
+
+//**********************************************************************************************************
+//
+// MARK: - Class -
+//
+//**********************************************************************************************************
+
 public class SwiftMaskTextField : UITextField {
+    
+//**************************************************
+// MARK: - Properties
+//**************************************************
     
     public let lettersAndDigitsReplacementChar: String = "*"
     public let anyLetterReplecementChar: String = "@"
@@ -16,14 +54,28 @@ public class SwiftMaskTextField : UITextField {
     public let upperCaseLetterReplecementChar: String = "A"
     public let digitsReplecementChar: String = "#"
     
+    /**
+     Var that holds the format pattern that you wish to apply
+     to some text
+     
+     If the pattern is set to "" no mask would be applied and
+     the textfield would behave like a normal one
+     */
     @IBInspectable public var formatPattern: String = ""
     
+    /**
+     Var that have the maximum length, based on the mask set
+     */
     public var maxLength: Int {
         get {
             return formatPattern.characters.count
         }
     }
     
+    /**
+     Overriding the var text from UITextField so if any text
+     is applied programmatically by calling formatText
+     */
     override public var text: String? {
         set {
             super.text = newValue
@@ -35,6 +87,10 @@ public class SwiftMaskTextField : UITextField {
         }
     }
     
+//**************************************************
+// MARK: - Constructors
+//**************************************************
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setup()
@@ -44,6 +100,14 @@ public class SwiftMaskTextField : UITextField {
         super.init(frame: frame)
         self.setup()
     }
+    
+    deinit {
+        self.deRegisterForNotifications()
+    }
+    
+//**************************************************
+// MARK: - Private Methods
+//**************************************************
     
     private func setup() {
         self.registerForNotifications()
@@ -90,6 +154,16 @@ public class SwiftMaskTextField : UITextField {
         return charactersArray.joinWithSeparator("")
     }
     
+//**************************************************
+// MARK: - Self Public Methods
+//**************************************************
+    
+    /**
+     Func that formats the text based on formatPattern
+     
+     Override this function if you want to customize the behaviour of 
+     the class
+     */
     public func formatText() {
         var currentTextForFormatting = ""
         
@@ -114,27 +188,27 @@ public class SwiftMaskTextField : UITextField {
                     let currentTextForFormattingCharacter = currentTextForFormatting.substringWithRange(currentTextForFormattingPatterRange)
                     
                     switch currentFormatCharacter {
-                    case self.lettersAndDigitsReplacementChar:
-                        finalText += currentTextForFormattingCharacter
-                        currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
-                    case self.anyLetterReplecementChar:
-                        let filteredChar = self.getOnlyLettersString(currentTextForFormattingCharacter)
-                        finalText += filteredChar
-                        currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
-                    case self.lowerCaseLetterReplecementChar:
-                        let filteredChar = self.getLowercaseLettersString(currentTextForFormattingCharacter)
-                        finalText += filteredChar
-                        currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
-                    case self.upperCaseLetterReplecementChar:
-                        let filteredChar = self.getUppercaseLettersString(currentTextForFormattingCharacter)
-                        finalText += filteredChar
-                        currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
-                    case self.digitsReplecementChar:
-                        let filteredChar = self.getOnlyDigitsString(currentTextForFormattingCharacter)
-                        finalText += filteredChar
-                        currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
-                    default:
-                        finalText += currentFormatCharacter
+                        case self.lettersAndDigitsReplacementChar:
+                            finalText += currentTextForFormattingCharacter
+                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                        case self.anyLetterReplecementChar:
+                            let filteredChar = self.getOnlyLettersString(currentTextForFormattingCharacter)
+                            finalText += filteredChar
+                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                        case self.lowerCaseLetterReplecementChar:
+                            let filteredChar = self.getLowercaseLettersString(currentTextForFormattingCharacter)
+                            finalText += filteredChar
+                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                        case self.upperCaseLetterReplecementChar:
+                            let filteredChar = self.getUppercaseLettersString(currentTextForFormattingCharacter)
+                            finalText += filteredChar
+                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                        case self.digitsReplecementChar:
+                            let filteredChar = self.getOnlyDigitsString(currentTextForFormattingCharacter)
+                            finalText += filteredChar
+                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                        default:
+                            finalText += currentFormatCharacter
                     }
                     
                     formatterIndex = formatterIndex.successor()
@@ -146,19 +220,12 @@ public class SwiftMaskTextField : UITextField {
                 }
             }
             super.text = finalText
-        }
-        
-        if self.maxLength > 0 {
+            
             if let text = self.text {
                 if text.characters.count > self.maxLength {
                     super.text = text.substringToIndex(text.startIndex.advancedBy(self.maxLength))
                 }
             }
         }
-        
-    }
-    
-    deinit {
-        self.deRegisterForNotifications()
     }
 }
