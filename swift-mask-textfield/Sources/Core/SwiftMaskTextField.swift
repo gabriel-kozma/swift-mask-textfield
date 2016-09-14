@@ -42,17 +42,17 @@ import UIKit
 //
 //**********************************************************************************************************
 
-public class SwiftMaskTextField : UITextField {
+open class SwiftMaskTextField : UITextField {
     
 //**************************************************
 // MARK: - Properties
 //**************************************************
     
-    public let lettersAndDigitsReplacementChar: String = "*"
-    public let anyLetterReplecementChar: String = "@"
-    public let lowerCaseLetterReplecementChar: String = "a"
-    public let upperCaseLetterReplecementChar: String = "A"
-    public let digitsReplecementChar: String = "#"
+    open let lettersAndDigitsReplacementChar: String = "*"
+    open let anyLetterReplecementChar: String = "@"
+    open let lowerCaseLetterReplecementChar: String = "a"
+    open let upperCaseLetterReplecementChar: String = "A"
+    open let digitsReplecementChar: String = "#"
     
     /**
      Var that holds the format pattern that you wish to apply
@@ -61,12 +61,12 @@ public class SwiftMaskTextField : UITextField {
      If the pattern is set to "" no mask would be applied and
      the textfield would behave like a normal one
      */
-    @IBInspectable public var formatPattern: String = ""
+    @IBInspectable open var formatPattern: String = ""
     
     /**
      Var that have the maximum length, based on the mask set
      */
-    public var maxLength: Int {
+    open var maxLength: Int {
         get {
             return formatPattern.characters.count
         }
@@ -76,7 +76,7 @@ public class SwiftMaskTextField : UITextField {
      Overriding the var text from UITextField so if any text
      is applied programmatically by calling formatText
      */
-    override public var text: String? {
+    override open var text: String? {
         set {
             super.text = newValue
             self.formatText()
@@ -109,49 +109,49 @@ public class SwiftMaskTextField : UITextField {
 // MARK: - Private Methods
 //**************************************************
     
-    private func setup() {
+    fileprivate func setup() {
         self.registerForNotifications()
     }
     
-    private func registerForNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(textDidChange),
-                                                         name: "UITextFieldTextDidChangeNotification",
-                                                         object: self)
+    fileprivate func registerForNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                             selector: #selector(textDidChange),
+                                             name: NSNotification.Name(rawValue: "UITextFieldTextDidChangeNotification"),
+                                             object: self)
     }
     
-    private func deRegisterForNotifications() {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+    fileprivate func deRegisterForNotifications() {
+        NotificationCenter.default.removeObserver(self)
     }
     
-    @objc private func textDidChange() {
+    @objc fileprivate func textDidChange() {
         self.undoManager?.removeAllActions()
         self.formatText()
     }
     
-    private func getOnlyDigitsString(string: String) -> String {
-        let charactersArray = string.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet)
-        return charactersArray.joinWithSeparator("")
+    fileprivate func getOnlyDigitsString(_ string: String) -> String {
+        let charactersArray = string.components(separatedBy: CharacterSet.decimalDigits.inverted)
+        return charactersArray.joined(separator: "")
     }
     
-    private func getOnlyLettersString(string: String) -> String {
-        let charactersArray = string.componentsSeparatedByCharactersInSet(NSCharacterSet.letterCharacterSet().invertedSet)
-        return charactersArray.joinWithSeparator("")
+    fileprivate func getOnlyLettersString(_ string: String) -> String {
+        let charactersArray = string.components(separatedBy: CharacterSet.letters.inverted)
+        return charactersArray.joined(separator: "")
     }
     
-    private func getUppercaseLettersString(string: String) -> String {
-        let charactersArray = string.componentsSeparatedByCharactersInSet(NSCharacterSet.uppercaseLetterCharacterSet().invertedSet)
-        return charactersArray.joinWithSeparator("")
+    fileprivate func getUppercaseLettersString(_ string: String) -> String {
+        let charactersArray = string.components(separatedBy: CharacterSet.uppercaseLetters.inverted)
+        return charactersArray.joined(separator: "")
     }
     
-    private func getLowercaseLettersString(string: String) -> String {
-        let charactersArray = string.componentsSeparatedByCharactersInSet(NSCharacterSet.lowercaseLetterCharacterSet().invertedSet)
-        return charactersArray.joinWithSeparator("")
+    fileprivate func getLowercaseLettersString(_ string: String) -> String {
+        let charactersArray = string.components(separatedBy: CharacterSet.lowercaseLetters.inverted)
+        return charactersArray.joined(separator: "")
     }
     
-    private func getFilteredString(string: String) -> String {
-        let charactersArray = string.componentsSeparatedByCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
-        return charactersArray.joinWithSeparator("")
+    fileprivate func getFilteredString(_ string: String) -> String {
+        let charactersArray = string.components(separatedBy: CharacterSet.alphanumerics.inverted)
+        return charactersArray.joined(separator: "")
     }
     
 //**************************************************
@@ -164,7 +164,7 @@ public class SwiftMaskTextField : UITextField {
      Override this function if you want to customize the behaviour of 
      the class
      */
-    public func formatText() {
+    open func formatText() {
         var currentTextForFormatting = ""
         
         if let text = super.text {
@@ -181,37 +181,49 @@ public class SwiftMaskTextField : UITextField {
             
             if currentTextForFormatting.characters.count > 0 {
                 while true {
-                    let formatPatternRange = formatterIndex ..< formatterIndex.advancedBy(1)
-                    let currentFormatCharacter = self.formatPattern.substringWithRange(formatPatternRange)
+                    let formatPatternRange = formatterIndex ..< formatPattern.index(after: formatterIndex)
+                    let currentFormatCharacter = self.formatPattern.substring(with: formatPatternRange)
                     
-                    let currentTextForFormattingPatterRange = currentTextForFormattingIndex ..< currentTextForFormattingIndex.advancedBy(1)
-                    let currentTextForFormattingCharacter = currentTextForFormatting.substringWithRange(currentTextForFormattingPatterRange)
+                    let currentTextForFormattingPatterRange = currentTextForFormattingIndex ..< currentTextForFormatting.index(after: currentTextForFormattingIndex)
+                    let currentTextForFormattingCharacter = currentTextForFormatting.substring(with: currentTextForFormattingPatterRange)
                     
                     switch currentFormatCharacter {
                         case self.lettersAndDigitsReplacementChar:
                             finalText += currentTextForFormattingCharacter
-                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                            currentTextForFormattingIndex = currentTextForFormatting.index(after: currentTextForFormattingIndex)
+                            formatterIndex = formatPattern.index(after: formatterIndex)
                         case self.anyLetterReplecementChar:
                             let filteredChar = self.getOnlyLettersString(currentTextForFormattingCharacter)
-                            finalText += filteredChar
-                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                            if !filteredChar.isEmpty {
+                                finalText += filteredChar
+                                formatterIndex = formatPattern.index(after: formatterIndex)
+                            }
+                            currentTextForFormattingIndex = currentTextForFormatting.index(after: currentTextForFormattingIndex)
                         case self.lowerCaseLetterReplecementChar:
                             let filteredChar = self.getLowercaseLettersString(currentTextForFormattingCharacter)
-                            finalText += filteredChar
-                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                            if !filteredChar.isEmpty {
+                                finalText += filteredChar
+                                formatterIndex = formatPattern.index(after: formatterIndex)
+                            }
+                            currentTextForFormattingIndex = currentTextForFormatting.index(after: currentTextForFormattingIndex)
                         case self.upperCaseLetterReplecementChar:
                             let filteredChar = self.getUppercaseLettersString(currentTextForFormattingCharacter)
-                            finalText += filteredChar
-                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                            if !filteredChar.isEmpty {
+                                finalText += filteredChar
+                                formatterIndex = formatPattern.index(after: formatterIndex)
+                            }
+                            currentTextForFormattingIndex = currentTextForFormatting.index(after: currentTextForFormattingIndex)
                         case self.digitsReplecementChar:
                             let filteredChar = self.getOnlyDigitsString(currentTextForFormattingCharacter)
-                            finalText += filteredChar
-                            currentTextForFormattingIndex = currentTextForFormattingIndex.successor()
+                            if !filteredChar.isEmpty {
+                                finalText += filteredChar
+                                formatterIndex = formatPattern.index(after: formatterIndex)
+                            }
+                            currentTextForFormattingIndex = currentTextForFormatting.index(after: currentTextForFormattingIndex)
                         default:
                             finalText += currentFormatCharacter
+                            formatterIndex = formatPattern.index(after: formatterIndex)
                     }
-                    
-                    formatterIndex = formatterIndex.successor()
                     
                     if formatterIndex >= self.formatPattern.endIndex ||
                         currentTextForFormattingIndex >= currentTextForFormatting.endIndex {
@@ -223,7 +235,7 @@ public class SwiftMaskTextField : UITextField {
             
             if let text = self.text {
                 if text.characters.count > self.maxLength {
-                    super.text = text.substringToIndex(text.startIndex.advancedBy(self.maxLength))
+                    super.text = text.substring(to: text.characters.index(text.startIndex, offsetBy: self.maxLength))
                 }
             }
         }

@@ -184,10 +184,12 @@
 					3338E86D1D809CC100767E4B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = FU7J9F5JA8;
+						LastSwiftMigration = 0800;
 					};
 					3338E8771D809CC100767E4B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = FU7J9F5JA8;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -358,6 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
 				PRODUCT_NAME = SwiftMaskTextfield;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -374,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
 				PRODUCT_NAME = SwiftMaskTextfield;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -384,6 +388,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfieldTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -394,6 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfieldTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
