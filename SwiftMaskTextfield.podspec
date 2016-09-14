@@ -1,20 +1,42 @@
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.name         = "swift-mask-textfield"
-  s.version      = "0.0.1"
-  s.summary      = "An TextField that can be used for masking"
+  s.name         = "SwiftMaskTextfield"
+  s.version      = "0.0.2"
+  s.summary      = "An TextField with masking capabilities"
 
   s.description  = <<-DESC
-  Textfield extension with masking capabilities
+  # SwiftMaskTextfield
+
+  SwiftMaskTextfield inherits from UITextField for supporting masks into textfields that can be defined into the storyboard
+
+  * Lightweight implementation
+  * Can be used with or without masks
+  * Ability to override de formatting function to create custom implemantion of the class
+  * The replaceable characters from the mask format can be changed by overriding them
+  * Supports spaces, dots and any special chars on the format, for instance: "####.### ###" 
+
+  ### How to use
+  * Install with cocoapods or copy the class SwiftMaskTextfield into your project
+  * Add a UITextfield component into your storyboard or xib
+  * Set it's custom class to SwiftMaskTextfield
+  * Set the formatting mask into the property formatPattern in Interface Builder or programattically 
+
+  | Characters | Format replacement |
+  |:------------:|:------------------------------:|
+  | letters and digits | __*__ |
+  | any letter | __@__ |
+  | lowercase letters | __a__ |
+  | uppercase letters | __A__ |
+  | digits | __#__ | 
+  
                    DESC
 
   s.homepage     = "https://github.com/gabriel-kozma/swift-mask-textfield"
   
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.license      = { :type => "MIT", :file => "../LICENSE.md" }
-
+  s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.author             = { "Gabriel Kozma" => "gabrielmackoz@gmail.com" }
@@ -26,10 +48,6 @@ Pod::Spec.new do |s|
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source       = { :git => "https://github.com/gabriel-kozma/swift-mask-textfield.git", :tag => "#{s.version}" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
-
-  # s.public_header_files = "Classes/**/*.h"
+  s.source_files  = "swift-mask-textfield/**/*.{swift}"
 end
