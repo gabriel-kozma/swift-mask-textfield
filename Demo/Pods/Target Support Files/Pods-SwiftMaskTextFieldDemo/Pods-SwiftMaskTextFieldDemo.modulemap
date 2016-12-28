@@ -1,0 +1,6 @@
+framework module Pods_SwiftMaskTextFieldDemo {
+  umbrella header "Pods-SwiftMaskTextFieldDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
