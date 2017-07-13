@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs'
+
+use_frameworks!
+
+target 'SwiftMaskTextFieldDemo' do
+  platform :ios, '8.0'
+  pod 'SwiftMaskTextField', :path => '../'
+end

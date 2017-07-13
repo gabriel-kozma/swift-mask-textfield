@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.name         = "SwiftMaskTextfield"
-  s.version      = "0.0.3"
+  s.name         = "SwiftMaskTextField"
+  s.version      = "0.0.4"
   s.summary      = "An TextField with masking capabilities"
 
   s.description  = <<-DESC
@@ -14,13 +14,13 @@ Pod::Spec.new do |s|
   * Can be used with or without masks
   * Ability to override de formatting function to create custom implemantion of the class
   * The replaceable characters from the mask format can be changed by overriding them
-  * Supports spaces, dots and any special chars on the format, for instance: "####.### ###" 
+  * Supports spaces, dots and any special chars on the format, for instance: "####.### ###"
 
   ### How to use
   * Install with cocoapods or copy the class SwiftMaskTextfield into your project
   * Add a UITextfield component into your storyboard or xib
   * Set it's custom class to SwiftMaskTextfield
-  * Set the formatting mask into the property formatPattern in Interface Builder or programattically 
+  * Set the formatting mask into the property formatPattern in Interface Builder or programattically
 
   | Characters | Format replacement |
   |:------------:|:------------------------------:|
@@ -28,12 +28,12 @@ Pod::Spec.new do |s|
   | any letter | __@__ |
   | lowercase letters | __a__ |
   | uppercase letters | __A__ |
-  | digits | __#__ | 
-  
+  | digits | __#__ |
+
                    DESC
 
   s.homepage     = "https://github.com/gabriel-kozma/swift-mask-textfield"
-  
+
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.license      = { :type => "MIT", :file => "LICENSE.md" }

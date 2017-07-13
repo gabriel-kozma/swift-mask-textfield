@@ -1,0 +1,6 @@
+framework module SwiftMaskTextField {
+  umbrella header "SwiftMaskTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}
