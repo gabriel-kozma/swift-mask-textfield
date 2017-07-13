@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3338E8791D809CC100767E4B /* SwiftMaskTextfield.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */; };
+		3338E8791D809CC100767E4B /* SwiftMaskTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338E86E1D809CC100767E4B /* SwiftMaskTextField.framework */; };
 		3338E8A41D80C1D900767E4B /* SwiftMaskTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3338E8A31D80C1D900767E4B /* SwiftMaskTextField.swift */; };
 		3338E8A51D80C65800767E4B /* SwiftMaskTextfield.h in Headers */ = {isa = PBXBuildFile; fileRef = 3338E8A01D80C1AD00767E4B /* SwiftMaskTextfield.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3338E8A61D80C66900767E4B /* swift_mask_textfieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3338E88D1D80A28000767E4B /* swift_mask_textfieldTests.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMaskTextfield.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3338E86E1D809CC100767E4B /* SwiftMaskTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMaskTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3338E8781D809CC100767E4B /* swift-mask-textfieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mask-textfieldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3338E88C1D80A28000767E4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3338E88D1D80A28000767E4B /* swift_mask_textfieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swift_mask_textfieldTests.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3338E8791D809CC100767E4B /* SwiftMaskTextfield.framework in Frameworks */,
+				3338E8791D809CC100767E4B /* SwiftMaskTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 		3338E86F1D809CC100767E4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */,
+				3338E86E1D809CC100767E4B /* SwiftMaskTextField.framework */,
 				3338E8781D809CC100767E4B /* swift-mask-textfieldTests.xctest */,
 			);
 			name = Products;
@@ -150,7 +150,7 @@
 			);
 			name = "swift-mask-textfield";
 			productName = "swift-mask-textfield";
-			productReference = 3338E86E1D809CC100767E4B /* SwiftMaskTextfield.framework */;
+			productReference = 3338E86E1D809CC100767E4B /* SwiftMaskTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3338E8771D809CC100767E4B /* swift-mask-textfieldTests */ = {
@@ -358,7 +358,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
-				PRODUCT_NAME = SwiftMaskTextfield;
+				PRODUCT_NAME = SwiftMaskTextField;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -375,7 +375,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
-				PRODUCT_NAME = SwiftMaskTextfield;
+				PRODUCT_NAME = SwiftMaskTextField;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
