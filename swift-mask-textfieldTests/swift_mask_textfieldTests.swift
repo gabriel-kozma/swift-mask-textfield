@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftMaskTextfield
+import SwiftMaskTextField
 
 class swift_mask_textfieldTests: XCTestCase {
     
