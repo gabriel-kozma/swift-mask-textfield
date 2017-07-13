@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double SwiftMaskTextfieldVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftMaskTextfieldVersionString[];
+FOUNDATION_EXPORT double SwiftMaskTextFieldVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftMaskTextFieldVersionString[];
 

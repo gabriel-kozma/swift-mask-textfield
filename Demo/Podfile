@@ -4,5 +4,5 @@ use_frameworks!
 
 target 'SwiftMaskTextFieldDemo' do
   platform :ios, '8.0'
-  pod 'SwiftMaskTextfield', :path => '../'
+  pod 'SwiftMaskTextField', :path => '../'
 end

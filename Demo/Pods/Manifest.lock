@@ -1,16 +1,16 @@
 PODS:
-  - SwiftMaskTextfield (0.0.3)
+  - SwiftMaskTextField (0.0.4)
 
 DEPENDENCIES:
-  - SwiftMaskTextfield (from `../`)
+  - SwiftMaskTextField (from `../`)
 
 EXTERNAL SOURCES:
-  SwiftMaskTextfield:
+  SwiftMaskTextField:
     :path: ../
 
 SPEC CHECKSUMS:
-  SwiftMaskTextfield: 22e993bee1f4968bfca8be7654c9046f952631d8
+  SwiftMaskTextField: c70f95e0e040d027068fcb155fd0aadbbdfe430a
 
-PODFILE CHECKSUM: f3f66bf52a42d67d3eca01960070274a2fe841cd
+PODFILE CHECKSUM: 079c7fddbec05e4809dba4655de91e198bae6b81
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.1
