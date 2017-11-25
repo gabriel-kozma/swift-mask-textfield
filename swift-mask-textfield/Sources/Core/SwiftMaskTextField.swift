@@ -179,13 +179,13 @@ open class SwiftMaskTextField : UITextField {
             
             currentTextForFormatting = self.getFilteredString(currentTextForFormatting)
             
-            if currentTextForFormatting.characters.count > 0 {
+            if currentTextForFormatting.count > 0 {
                 while true {
                     let formatPatternRange = formatterIndex ..< formatPattern.index(after: formatterIndex)
-                    let currentFormatCharacter = self.formatPattern.substring(with: formatPatternRange)
+                    let currentFormatCharacter = String(self.formatPattern[formatPatternRange])
                     
                     let currentTextForFormattingPatterRange = currentTextForFormattingIndex ..< currentTextForFormatting.index(after: currentTextForFormattingIndex)
-                    let currentTextForFormattingCharacter = currentTextForFormatting.substring(with: currentTextForFormattingPatterRange)
+                    let currentTextForFormattingCharacter = String(currentTextForFormatting[currentTextForFormattingPatterRange])
                     
                     switch currentFormatCharacter {
                         case self.lettersAndDigitsReplacementChar:
