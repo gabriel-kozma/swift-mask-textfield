@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_SwiftMaskTextField : NSObject
+@interface PodsDummy_SwiftMaskTextfield : NSObject
 @end
-@implementation PodsDummy_SwiftMaskTextField
+@implementation PodsDummy_SwiftMaskTextfield
 @end
