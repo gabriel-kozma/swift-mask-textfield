@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "SwiftMaskTextfield"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "An TextField with masking capabilities"
 
   s.description  = <<-DESC
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://www.linkedin.com/in/gabriel-maccori-kozma-4b3b1032"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source       = { :git => "https://github.com/gabriel-kozma/swift-mask-textfield.git", :tag => "#{s.version}" }

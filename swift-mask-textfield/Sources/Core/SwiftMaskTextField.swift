@@ -42,7 +42,7 @@ import UIKit
 //
 //**********************************************************************************************************
 
-open class SwiftMaskTextField : UITextField {
+open class SwiftMaskTextfield : UITextField {
     
 //**************************************************
 // MARK: - Properties
