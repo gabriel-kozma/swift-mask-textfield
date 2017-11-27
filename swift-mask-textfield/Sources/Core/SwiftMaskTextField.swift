@@ -68,7 +68,7 @@ open class SwiftMaskTextField : UITextField {
      */
     open var maxLength: Int {
         get {
-            return formatPattern.characters.count
+            return formatPattern.count
         }
     }
     
@@ -168,7 +168,7 @@ open class SwiftMaskTextField : UITextField {
         var currentTextForFormatting = ""
         
         if let text = super.text {
-            if text.characters.count > 0 {
+            if text.count > 0 {
                 currentTextForFormatting = text
             }
         }
@@ -179,13 +179,13 @@ open class SwiftMaskTextField : UITextField {
             
             currentTextForFormatting = self.getFilteredString(currentTextForFormatting)
             
-            if currentTextForFormatting.characters.count > 0 {
+            if currentTextForFormatting.count > 0 {
                 while true {
                     let formatPatternRange = formatterIndex ..< formatPattern.index(after: formatterIndex)
-                    let currentFormatCharacter = self.formatPattern.substring(with: formatPatternRange)
+                    let currentFormatCharacter = String(self.formatPattern[formatPatternRange])
                     
                     let currentTextForFormattingPatterRange = currentTextForFormattingIndex ..< currentTextForFormatting.index(after: currentTextForFormattingIndex)
-                    let currentTextForFormattingCharacter = currentTextForFormatting.substring(with: currentTextForFormattingPatterRange)
+                    let currentTextForFormattingCharacter = String(currentTextForFormatting[currentTextForFormattingPatterRange])
                     
                     switch currentFormatCharacter {
                         case self.lettersAndDigitsReplacementChar:
@@ -234,8 +234,8 @@ open class SwiftMaskTextField : UITextField {
             super.text = finalText
             
             if let text = self.text {
-                if text.characters.count > self.maxLength {
-                    super.text = text.substring(to: text.characters.index(text.startIndex, offsetBy: self.maxLength))
+                if text.count > self.maxLength {
+                    super.text = String(text[text.index(text.startIndex, offsetBy: self.maxLength)])
                 }
             }
         }
