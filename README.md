@@ -21,3 +21,6 @@ SwiftMaskTextfield inherits from UITextField for supporting masks into textfield
 | lowercase letters | __a__ |
 | uppercase letters | __A__ |
 | digits | __#__ | 
+
+### (1.1.0) 
+* Added support for adding a prefix on the resulting string, works the same as before, just set the prefix on the storyboard or through code and the lib will take care of the rest
