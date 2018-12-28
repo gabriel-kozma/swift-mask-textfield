@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "SwiftMaskTextfield"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "An TextField with masking capabilities"
 
   s.description  = <<-DESC
