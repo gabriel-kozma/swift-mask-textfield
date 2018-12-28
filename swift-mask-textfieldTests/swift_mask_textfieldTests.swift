@@ -11,7 +11,7 @@ import SwiftMaskTextField
 
 class swift_mask_textfieldTests: XCTestCase {
     
-    let textField = SwiftMaskTextField(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+    let textField = SwiftMaskTextfield(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
     
     func testTextField_WithDigitsOnlyFormatPatternAndValidate_ShouldSucceed() {
         self.measure {

@@ -48,11 +48,11 @@ open class SwiftMaskTextfield : UITextField {
 // MARK: - Properties
 //**************************************************
     
-    open let lettersAndDigitsReplacementChar: String = "*"
-    open let anyLetterReplecementChar: String = "@"
-    open let lowerCaseLetterReplecementChar: String = "a"
-    open let upperCaseLetterReplecementChar: String = "A"
-    open let digitsReplecementChar: String = "#"
+    public let lettersAndDigitsReplacementChar: String = "*"
+    public let anyLetterReplecementChar: String = "@"
+    public let lowerCaseLetterReplecementChar: String = "a"
+    public let upperCaseLetterReplecementChar: String = "A"
+    public let digitsReplecementChar: String = "#"
     
     /**
      Var that holds the format pattern that you wish to apply
