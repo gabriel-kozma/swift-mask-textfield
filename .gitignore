@@ -13,3 +13,5 @@ xcuserdata
 *.hmap
 *.ipa
 *.xcuserstate
+swift-mask-textfield.xcodeproj/project.xcworkspace/xcshareddata
+Demo/SwiftMaskTextFieldDemo.xcworkspace/xcshareddata
