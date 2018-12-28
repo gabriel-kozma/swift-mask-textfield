@@ -64,11 +64,19 @@ open class SwiftMaskTextfield : UITextField {
     @IBInspectable open var formatPattern: String = ""
     
     /**
+     Var that holds the prefix to be added to the textfield
+     
+     If the prefix is set to "" no string will be added to the beggining
+     of the text
+     */
+    @IBInspectable open var prefix: String = ""
+    
+    /**
      Var that have the maximum length, based on the mask set
      */
     open var maxLength: Int {
         get {
-            return formatPattern.count
+            return formatPattern.count + prefix.count
         }
     }
     
@@ -154,6 +162,19 @@ open class SwiftMaskTextfield : UITextField {
         return charactersArray.joined(separator: "")
     }
     
+    fileprivate func getStringWithoutPrefix(_ string: String) -> String {
+        if string.range(of: self.prefix) != nil {
+            if string.count > self.prefix.count {
+                let prefixIndex = string.index(string.endIndex, offsetBy: (string.count - self.prefix.count) * -1)
+                return String(string[prefixIndex...])
+            } else if string.count == self.prefix.count {
+                return ""
+            }
+            
+        }
+        return string
+    }
+    
 //**************************************************
 // MARK: - Self Public Methods
 //**************************************************
@@ -169,7 +190,7 @@ open class SwiftMaskTextfield : UITextField {
         
         if let text = super.text {
             if text.count > 0 {
-                currentTextForFormatting = text
+                currentTextForFormatting = self.getStringWithoutPrefix(text)
             }
         }
         
@@ -231,7 +252,12 @@ open class SwiftMaskTextfield : UITextField {
                     }
                 }
             }
-            super.text = finalText
+            
+            if finalText.count > 0 {
+                super.text = "\(self.prefix)\(finalText)"
+            } else {
+                super.text = finalText
+            }
             
             if let text = self.text {
                 if text.count > self.maxLength {
