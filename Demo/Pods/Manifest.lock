@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   SwiftMaskTextfield:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftMaskTextfield: 22e993bee1f4968bfca8be7654c9046f952631d8
+  SwiftMaskTextfield: 341bf2f75ac068b213768eaeb6180229cbd3b03f
 
 PODFILE CHECKSUM: f3f66bf52a42d67d3eca01960070274a2fe841cd
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.5.3
