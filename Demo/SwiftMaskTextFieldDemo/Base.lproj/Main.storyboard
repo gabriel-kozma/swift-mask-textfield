@@ -36,7 +36,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cL-lx-Xo4" customClass="SwiftMaskTextField" customModule="SwiftMaskTextfield">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cL-lx-Xo4" customClass="SwiftMaskTextfield" customModule="SwiftMaskTextfield">
                                                         <rect key="frame" x="0.0" y="31" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,6 +49,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="2cL-lx-Xo4" secondAttribute="trailing" id="4K3-4L-8up"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cij-DU-t2p" secondAttribute="trailing" constant="5" id="TPO-Tx-W50"/>
                                                     <constraint firstItem="2cL-lx-Xo4" firstAttribute="top" secondItem="cij-DU-t2p" secondAttribute="bottom" constant="5" id="Tz8-gL-zg6"/>
                                                     <constraint firstItem="cij-DU-t2p" firstAttribute="top" secondItem="Zfq-qB-Fou" secondAttribute="top" constant="5" id="WNE-aT-Wb8"/>
                                                     <constraint firstItem="2cL-lx-Xo4" firstAttribute="leading" secondItem="cij-DU-t2p" secondAttribute="leading" id="ctE-IF-ncG"/>
@@ -59,13 +60,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3F-Ym-Z1z">
                                                 <rect key="frame" x="0.0" y="101" width="343" height="66"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aa@@@@-####-******" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-qV-uLq">
-                                                        <rect key="frame" x="0.0" y="5" width="182.5" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Format: Aa@@@@-####-******" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-qV-uLq">
+                                                        <rect key="frame" x="0.0" y="5" width="246" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cG-DH-t8O" customClass="SwiftMaskTextField" customModule="SwiftMaskTextfield">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cG-DH-t8O" customClass="SwiftMaskTextfield" customModule="SwiftMaskTextfield">
                                                         <rect key="frame" x="0.0" y="31" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -78,6 +79,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="5cG-DH-t8O" secondAttribute="bottom" constant="5" id="BXg-WQ-XYt"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Odj-qV-uLq" secondAttribute="trailing" constant="5" id="GTS-3b-bLC"/>
                                                     <constraint firstAttribute="trailing" secondItem="5cG-DH-t8O" secondAttribute="trailing" id="R7d-AC-dYF"/>
                                                     <constraint firstItem="Odj-qV-uLq" firstAttribute="top" secondItem="q3F-Ym-Z1z" secondAttribute="top" constant="5" id="cJp-VH-IB0"/>
                                                     <constraint firstItem="5cG-DH-t8O" firstAttribute="leading" secondItem="Odj-qV-uLq" secondAttribute="leading" id="dpg-Vw-PVB"/>
