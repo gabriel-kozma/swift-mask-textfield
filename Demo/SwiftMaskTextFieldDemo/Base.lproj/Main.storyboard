@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,13 +36,13 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cL-lx-Xo4" customClass="SwiftMaskTextfield" customModule="SwiftMaskTextfield">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cL-lx-Xo4" customClass="SwiftMaskTextField" customModule="SwiftMaskTextfield">
                                                         <rect key="frame" x="0.0" y="31" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="formatPattern" value="*###.### ###"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="formatPattern" value="####.### ###"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
@@ -55,14 +54,45 @@
                                                     <constraint firstItem="2cL-lx-Xo4" firstAttribute="leading" secondItem="cij-DU-t2p" secondAttribute="leading" id="ctE-IF-ncG"/>
                                                     <constraint firstItem="cij-DU-t2p" firstAttribute="leading" secondItem="Zfq-qB-Fou" secondAttribute="leading" id="glE-3g-dSa"/>
                                                     <constraint firstAttribute="bottom" secondItem="2cL-lx-Xo4" secondAttribute="bottom" constant="5" id="hxl-Yo-q9G"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cij-DU-t2p" secondAttribute="trailing" constant="20" symbolic="YES" id="uVo-UE-wdV"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3F-Ym-Z1z">
+                                                <rect key="frame" x="0.0" y="101" width="343" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aa@@@@-####-******" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-qV-uLq">
+                                                        <rect key="frame" x="0.0" y="5" width="182.5" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cG-DH-t8O" customClass="SwiftMaskTextField" customModule="SwiftMaskTextfield">
+                                                        <rect key="frame" x="0.0" y="31" width="343" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="formatPattern" value="Aa@@@@-####-******"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="5cG-DH-t8O" secondAttribute="bottom" constant="5" id="BXg-WQ-XYt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5cG-DH-t8O" secondAttribute="trailing" id="R7d-AC-dYF"/>
+                                                    <constraint firstItem="Odj-qV-uLq" firstAttribute="top" secondItem="q3F-Ym-Z1z" secondAttribute="top" constant="5" id="cJp-VH-IB0"/>
+                                                    <constraint firstItem="5cG-DH-t8O" firstAttribute="leading" secondItem="Odj-qV-uLq" secondAttribute="leading" id="dpg-Vw-PVB"/>
+                                                    <constraint firstItem="5cG-DH-t8O" firstAttribute="top" secondItem="Odj-qV-uLq" secondAttribute="bottom" constant="5" id="lIW-Qg-ayl"/>
+                                                    <constraint firstItem="Odj-qV-uLq" firstAttribute="leading" secondItem="q3F-Ym-Z1z" secondAttribute="leading" id="zxQ-Os-BIZ"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="q3F-Ym-Z1z" firstAttribute="top" secondItem="Zfq-qB-Fou" secondAttribute="bottom" constant="20" id="3dN-mQ-3uU"/>
                                             <constraint firstItem="Zfq-qB-Fou" firstAttribute="leading" secondItem="crI-i3-QuN" secondAttribute="leading" id="6vQ-RU-b6I"/>
                                             <constraint firstItem="Zfq-qB-Fou" firstAttribute="top" secondItem="crI-i3-QuN" secondAttribute="top" constant="15" id="BNL-f2-Llr"/>
+                                            <constraint firstItem="q3F-Ym-Z1z" firstAttribute="trailing" secondItem="Zfq-qB-Fou" secondAttribute="trailing" id="OhZ-Mj-Rha"/>
+                                            <constraint firstItem="q3F-Ym-Z1z" firstAttribute="leading" secondItem="Zfq-qB-Fou" secondAttribute="leading" id="VhM-NM-Wcx"/>
                                             <constraint firstAttribute="trailing" secondItem="Zfq-qB-Fou" secondAttribute="trailing" id="sQC-TQ-eDE"/>
                                         </constraints>
                                     </view>
