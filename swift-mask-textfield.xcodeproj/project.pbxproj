@@ -178,27 +178,28 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = gabrielmackoz;
 				TargetAttributes = {
 					3338E86D1D809CC100767E4B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = FU7J9F5JA8;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1160;
 					};
 					3338E8771D809CC100767E4B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = FU7J9F5JA8;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
 			buildConfigurationList = 3338E8681D809CC100767E4B /* Build configuration list for PBXProject "swift-mask-textfield" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3338E8641D809CC100767E4B;
 			productRefGroup = 3338E86F1D809CC100767E4B /* Products */;
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -319,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -382,7 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
 				PRODUCT_NAME = SwiftMaskTextField;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -400,7 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfield";
 				PRODUCT_NAME = SwiftMaskTextField;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -411,7 +414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfieldTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -422,7 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gabrielmackoz.swift-mask-textfieldTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
